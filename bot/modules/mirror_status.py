@@ -16,7 +16,7 @@ def mirror_status(update, context):
             currentTime = get_readable_time(time() - botStartTime)
             total, used, free, _ = disk_usage('.')
             free = get_readable_file_size(free)
-            message = 'No Active Downloads !\n___________________________'
+            message = '🤷‍♂️No Active Downloads !\n___________________________'
             message += f"\n<b>CPU:</b> {cpu_percent()}% | <b>FREE:</b> {free}" \
                        f"\n<b>RAM:</b> {virtual_memory().percent}% | <b>UPTIME:</b> {currentTime}"
             reply_message = sendMessage(message, context.bot, update)
